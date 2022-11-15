@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="stylesheet" href="style.css" />
+	<title>AP2 - JOGO</title>
+
+</h:head>
+<h:body>
+	<h:form id="formulario">
+
+		<div class="container">
+			<div class="center">
+				<h1>AP2 DE DESENVOLVIMENTO DE APLICAÇÕES CORPORATIVAS</h1>
+				<h3>Levir César Ribeiro Lemos</h3>
+			</div>
+			
+			<p:messages id="messages" showDetail="true" closable="true">
+				<p:autoUpdate />
+			</p:messages>
+			<div class="proximo">
+				<div class="flex">
+					<p:outputLabel for="jogo1" value="Jogo 1: "  />
+					<p:inputText required="true" id="jogo1" value="#{jogoBean.jogo.v1}" >
+						<p:keyFilter mask="num" />
+					</p:inputText>
+				</div>
+				<div class="flex">
+					<p:outputLabel for="jogo2" value="Jogo 2: "  />
+					<p:inputText required="true" id="jogo2" value="#{jogoBean.jogo.v2}" >
+						<p:keyFilter mask="num" />
+					</p:inputText>
+				</div>
+				<div class="flex">
+					<p:outputLabel for="jogo3" value="Jogo 3: "  />
+					<p:inputText required="true" id="jogo3" value="#{jogoBean.jogo.v3}" >
+						<p:keyFilter mask="num" />
+					</p:inputText>
+				</div>
+				<div class="flex">
+					<p:outputLabel for="jogo4" value="Jogo 4: "  />
+					<p:inputText required="true" id="jogo4" value="#{jogoBean.jogo.v4}" >
+						<p:keyFilter mask="num" />
+					</p:inputText>
+				</div>
+				<div class="flex">
+					<p:outputLabel for="jogo5" value="Jogo 5: "  />
+					<p:inputText required="true" id="jogo5" value="#{jogoBean.jogo.v5}" >
+						<p:keyFilter mask="num" />
+					</p:inputText>
+				</div>
+			</div>
+			
+			<br/>
+			<p:commandButton value="Salvar" action="#{jogoBean.salvar}"
+				update="formulario" />
+			<p:link outcome="listagem" value="Listar" />
+		</div>
+
+
+	</h:form>
+
+</h:body>
+
+</html>
